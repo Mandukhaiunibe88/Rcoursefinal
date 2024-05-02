@@ -1,0 +1,93 @@
+---
+title: "R course assessment Mandukhai"
+author: "Mandukhai Ganbat"
+date: "`r date()`"
+format:
+  html:
+    toc: true
+    code-fold: show
+    code-tools: true
+    df-print: paged
+    embed-resources: true
+  pdf:
+    toc: true
+  docx:
+    toc: true
+---
+
+```{r}
+#| output: false
+# Load libraries
+
+library(survival)
+library(survminer)
+```
+
+## Introduction
+
+The aim of this final assignment is to generate Kaplan-Meier curve for lung cancer survival rates stratified by gender.
+
+## Data
+
+I have obtained and processed the lung cancer survival data from R's built-in database, "survival".
+
+```{r}
+#| output: false
+
+source("C:/Users/mg23g383/Desktop/R course tutorial/project-template-main/my_R_course_day1/Git/Rcoursefinal/01_final_kaplanmeier.R")
+```
+
+@fig-cases illustrates the number at risk by gender in lung cancer survival. This information holds clinical significance (p = 0.0049), indicating a notable association between gender and lung cancer survival rates. Furthermore, the observed trend suggests that lung cancer survival decreases over time.
+
+```{r}
+#| label: fig-cases
+survivalplot
+```
+
+## Conclusions
+
+The observed trend indicates a decrease in lung cancer survival over time. These findings underscore the importance of further research and targeted interventions to address disparities in lung cancer outcomes based on gender.
+
+<!-- ```{r} -->
+
+<!-- # Process data -->
+
+<!-- region <- "CH" -->
+
+<!-- window_start <- ymd("2020-09-01") -->
+
+<!-- window_end <- ymd("2020-11-30") -->
+
+<!-- cases <- cases |> -->
+
+<!--   filter(geoRegion == region & datum >= window_start & datum <= window_end) |> -->
+
+<!--   select(datum, entries) -->
+
+<!-- cases -->
+
+<!-- ``` -->
+
+<!-- ```{r} -->
+
+<!-- #| label: fig-cases -->
+
+<!-- #| fig-cap: "Laboratory-confirmed cases of COVID-19 in Switzerland in 2020." -->
+
+<!-- #| fig-width: 8 -->
+
+<!-- #| fig-height: 4 -->
+
+<!-- ggplot(cases, aes(x = datum, y = entries)) + -->
+
+<!--   geom_bar(stat = "identity", fill = unibeSaphire()) + -->
+
+<!--   labs(x = "", y = "Laboratory-confirmed cases") + -->
+
+<!--   theme_minimal() -->
+
+<!-- ``` -->
+
+<!-- ## Conclusions -->
+
+<!-- The number of laboratory-confirmed cases of COVID-19 in Switzerland rapidly increased during October 2020 and subsequently declined. -->
