@@ -1,5 +1,5 @@
 ---
-title: "R course assessment Mandukhai"
+title: "R-course assessment Mandukhai"
 author: "Mandukhai Ganbat"
 date: "`r date()`"
 format:
@@ -37,16 +37,18 @@ I have obtained and processed the lung cancer survival data from R's built-in da
 source("C:/Users/mg23g383/Desktop/R course tutorial/project-template-main/my_R_course_day1/Git/Rcoursefinal/R/01_final_kaplanmeier.R")
 ```
 
-@fig-cases illustrates the number at risk by gender in lung cancer survival. This information holds clinical significance (p = 0.0049), indicating a notable association between gender and lung cancer survival rates. Furthermore, the observed trend suggests that lung cancer survival decreases over time.
+@fig-cases illustrates the number at risk by gender in lung cancer survival. This information holds clinical significance (p = 0.0049), indicating possible association between gender and lung cancer survival rates. 
 
 ```{r}
 #| label: fig-cases
+#| fig-cap: "Gender difference in lung cancer survival"
+
 survivalplot
 ```
 
 ## Conclusions
 
-The observed trend indicates a decrease in lung cancer survival over time. These findings underscore the importance of further research and targeted interventions to address disparities in lung cancer outcomes based on gender.
+This indicates a decrease in lung cancer survival over time. These findings underscore the importance of further research and targeted interventions to address disparities in lung cancer outcomes based on gender.
 
 <!-- ```{r} -->
 
